@@ -11,7 +11,7 @@ getUsers().then(result => {
     let usersBody = "";
 
     result.forEach(user => {
-        usersBody+= `<tr><td>${user.id}</td><td>${user.firstName}</td><td>${user.lastName}</td><td>${user.email}</td></tr>`;
+        usersBody+= `<tr><td><b>${user.id} &nbsp;</b></td><td>${user.firstName}</td><td>${user.lastName}</td><td>${user.email}</td></tr>`;
     });
 
     global.document.getElementById('users').innerHTML = usersBody;
