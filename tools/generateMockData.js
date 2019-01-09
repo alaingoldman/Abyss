@@ -5,12 +5,12 @@ import chalk from 'chalk';
 
 const json = JSON.stringify(jsf.generate(schema));
 
-console.log(json);
-
 fs.writeFile("./src/api/db.json", json, function (err) {
     if (err) {
+        /* eslint-disable no-console */
         return console.log(chalk.red(err));
     } else {
         console.log(chalk.green("Mock data generated"));
+        /* eslint-enable no-console */
     }
-})
+});
