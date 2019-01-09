@@ -14,7 +14,7 @@ getUsers().then(result => {
         usersBody+= `
             <tr>
                 <td>
-                    &nbsp;
+                    <a href="#" data-id="${user.id}" class="deleteUser">Delete</a>
                 </td>
                 <td>
                     <b>${user.id}</b>

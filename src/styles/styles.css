@@ -14,3 +14,6 @@ a.active {
 nav {
     padding-top: 20px;
 }
+.spacer td, .spacer th{
+    padding: 3px;
+}
