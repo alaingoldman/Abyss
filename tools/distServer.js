@@ -1,7 +1,7 @@
-import express from 'express';
-import path from 'path';
-import open from 'open';
 import compression from 'compression';
+import express from 'express';
+import open from 'open';
+import path from 'path';
 
 /* eslint-disable no-console */
 

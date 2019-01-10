@@ -1,8 +1,8 @@
-import express from 'express';
-import webpack from 'webpack';
-import path from 'path';
 import config from '../webpack.config.dev';
+import express from 'express';
 import open from 'open';
+import path from 'path';
+import webpack from 'webpack';
 
 /* eslint-disable no-console */
 
