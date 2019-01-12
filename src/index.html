@@ -1,6 +1,21 @@
+<!-- 
+  **NOTE** This is a template for index.html.
+  It used ejs and htmlWebpackPlugin to generate a different index.html for each enviornment,
+  htmlWebpackPlugin will dynamically add references to the scripts and styles that it bundles
+  to this file. The generated bundles have hash-based filenames,
+  so it's necessary to add teh references dynamically. 
+  For more info on ejs, see https://www.embeddedjs.com/.
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <% if (htmlWebpackPlugin.options.trackJSToken) { %>
+      <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+      <script>
+        window.TrackJS && TrackJS.install({
+          token: '<%=htmlWebpackPlugin.options.trackJSToken %>'});
+      </script>
+    <% } %>
     <title>Pluralsight Admin</title>
   </head>
   <body>
