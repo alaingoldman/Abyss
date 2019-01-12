@@ -1,5 +1,5 @@
-import expect from 'expect';
 import { JSDOM } from 'jsdom';
+import expect from 'expect';
 import fs from 'fs';
 
 describe('Our first test', () => {

@@ -1,21 +1,16 @@
-import config from '../webpack.config.dev';
+import compression from 'compression';
 import express from 'express';
 import open from 'open';
 import path from 'path';
-import webpack from 'webpack';
 
 /* eslint-disable no-console */
 
 const port = 3000;
 const app = express();
-const compiler = webpack(config);
 
-app.use(require('webpack-dev-middleware')(compiler, {
-  noInfo: true,
-  publicPath: config.output.publicPath
-}));
-
-app.use(require('webpack-hot-middleware')(compiler));
+app.use(compression()); // this is NOT for actual production use. This is just useful for hosting the 
+                        // minified production build for local debugging purposes.
+app.use(express.static('dist'));
 
 app.get('/users', function(req, res) {
   // Hard coding for simplicity, Pretend this hits a real database
@@ -27,7 +22,7 @@ app.get('/users', function(req, res) {
 });
 
 app.get('*', function(req, res) {
-  res.sendFile(path.join( __dirname, '../src/index.html'));
+  res.sendFile(path.join( __dirname, '../dist/index.html'));
 });
 
 

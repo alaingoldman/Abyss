@@ -4,31 +4,51 @@ import webpack from 'webpack';
 
 export default {
   debug: true,
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   noInfo: false,
-  entry: [
-    'eventsource-polyfill', // necessary for hot reloading with IE
-    'webpack-hot-middleware/client?reload=true', //note that it reloads the page if hot module reloading fails.
-    path.resolve(__dirname, 'src/index')
-  ],
+  entry: {
+    vendor: path.resolve(__dirname, 'src/index'),
+    main: path.resolve(__dirname, 'src/index')
+  },
   target: 'web',
   output: {
     path: __dirname + '/dist', // Note: Physical files are only output by the production build task `npm run build`.
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   devServer: {
-    contentBase: path.resolve(__dirname, 'src')
+    contentBase: path.resolve(__dirname, 'dist')
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
+    // Use CommonsChunkPlugin to create a seperate bundle 
+    // of vendor libraries so that they're cached seperately. 
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor'
+    }),
 
     // Create HTML file that includes reference to bundled JS.
     new HtmlWebpackPlugin({
       template: 'src/index.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true, 
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true, 
+        keepClosingSlash: true, 
+        minifyJS: true,
+        minifyCSS: true, 
+        minifyURLs: true
+      },
       inject: true
-    })
+    }),
+    
+    // Minify JS
+    new webpack.optimize.UglifyJsPlugin(),
+
+    // Eliminate duplicate packages when generating bundle
+    new webpack.optimize.DedupePlugin()
   ],
   module: {
     loaders: [
