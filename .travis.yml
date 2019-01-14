@@ -1,3 +1,8 @@
 language: node_js
 node_js:
-  - "6"
+- '6'
+deploy:
+  provider: heroku
+  api_key:
+    secure: Md2FuUkj6o4Nb2ZCSVfbRQrrIHjKE8MKLATiZijxrDyU0J5CbrmeLuRpFsl+O6+rSGuWQE8j/n2hoYc/ztpDKuWBPV7Y7v3dszxAk12LbJ+iYCpAL3uMKBPFEC3AGk47T0XzRJob5+g4zCgJ90bB1q57QN2ePJzk2OmRZscXC2M8kHvbFxy/JDCD/nrX7UFUvUf6dhOoIDfNlwoJr2GwbUthO3pgGx1mKg8gP/Sjv4S/Y09b0FUg3C3Enc2PWjIODRzaTfy/CwLtm8GqeKPXyDChC2lFGBexmw+XnIdmPoF8fzsj1wJn+JsJiXhUUSi8VthF8fSHNQUaFokKqyG/fnNBYteGF2v/lvglYSpvJuQCp7/Kf3jSh2k9yEriQKqqTFJ6TKd9gEhAf7DrM011qkKuLqQhuNFovlQM6iYSa2cESPrixrqWF50qDY8MVZYX3b/eFJLB+MyjkeEQFk0iihyBXQFeK602f4kcwLruJnuilZIFbGo3O1UMjDT1sFtyFwmMR1C2irIcS9v4cpw6RpH95FCmIEAuk3R+HrQbrNrRNyd6pU3t0yq1IZNkouGP0THGrXRWDta9JkwPdNRJBn52EbMhrzMbVbeTqFQNs8g7cxatL9vFoO5Iy7XGv+oTDQDeJ6zPdwe//K8kcIc4MF9BG8/ubgr3KCdoAefqZOs=
+  app: stormy-dawn-37737
