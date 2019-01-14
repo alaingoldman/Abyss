@@ -28,7 +28,33 @@ export const schema = {
           },
           "required": ["id", "firstName", "lastName", "email"]
         }
-      }
+      },
+      "tasks": {
+        "minItems": 20,
+        "items": {
+            "type": "object", 
+            "properties": {
+                "message": {
+                    "type": "string"
+                },
+                "author": {
+                    "type": "string",
+                    "faker": {
+                        "fake": "{{name.suffix}} {{name.firstName}}"
+                    }
+                },
+                "completed": {
+                    "type": "boolean"
+                },
+                "createdAt": {
+                    "type": "integer",
+                    "minimum": 1537489770639,
+                    "maximum": 1547489770639
+                }
+            }, 
+            "required": ["message", "author", "completed", "createdAt"]
+        }
+    }
     },
     "required": ["users"]
   };
