@@ -1,4 +1,3 @@
-import {Link} from 'react-router'; 
 import React from 'react';
 
 class AboutPage extends React.Component {
