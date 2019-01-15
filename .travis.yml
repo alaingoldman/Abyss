@@ -1,10 +1,10 @@
 language: node_js
 node_js:
 - '6'
-after_success:
-  - npm run build
-before_deploy:
-  - cd dist
+# after_success:
+#   - npm run build
+# before_deploy:
+#   - cd dist
 deploy:
   provider: heroku
   skip_cleanup: true
