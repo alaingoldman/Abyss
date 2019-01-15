@@ -8,3 +8,7 @@ deploy:
   app: stormy-dawn-37737
   on:
     repo: alaingoldman/Abyss
+  povider: surge
+  domain: jealous-talk.surge.sh
+  surge_login: alain.goldman@gmail.com
+  surge_token: 7d227ade9595fdcae932fdd28cfddc94
