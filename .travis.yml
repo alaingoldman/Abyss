@@ -4,8 +4,8 @@ node_js:
 after_success:
   - npm run build
   - npm run deploy
-before_deploy:
-  - cd dist
+# before_deploy:
+#   - cd dist
 deploy:
   # provider: heroku
   # skip_cleanup: true
