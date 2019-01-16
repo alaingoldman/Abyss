@@ -16,5 +16,3 @@ deploy:
   #   repo: alaingoldman/Abyss
   provider: surge
   domain:  economic-surprise.surge.sh
-  surge_login: alain.goldman@gmail.com
-  surge_token: 7d227ade9595fdcae932fdd28cfddc94
