@@ -16,3 +16,5 @@ deploy:
   #   repo: alaingoldman/Abyss
   provider: surge
   domain:  economic-surprise.surge.sh
+  skip_cleanup: true
+  project: ./dist/  #build output path
