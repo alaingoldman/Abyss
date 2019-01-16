@@ -9,13 +9,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <% if (htmlWebpackPlugin.options.trackJSToken) { %>
-      <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
-      <script>
-        window.TrackJS && TrackJS.install({
-          token: '<%=htmlWebpackPlugin.options.trackJSToken %>'});
-      </script>
-    <% } %>
     <title>Pluralsight Admin</title>
   </head>
   <body>
