@@ -5,16 +5,16 @@ node_js:
 #   - compile
 #   - test
 #   - deploy
-# after_success:
-#   - npm run build
-#   - npm run deploy
+after_success:
+  - npm run build
+  - npm run deploy
 # if: branch = release/alpha
 deploy:
   - provider: surge
+    project: ./dist/  #build output path
+    skip_cleanup: true
     if: branch = release/alpha
     domain:  economic-surprise.surge.sh
-    skip_cleanup: true
-    project: ./dist/  #build output path
   # - provider: heroku
   #   skip_cleanup: true
   #   project: ./dist/  #build output path
