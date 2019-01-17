@@ -4,7 +4,7 @@ node_js:
 # if: branch = release/alpha
 stages: 
   - name: alpha
-    if: branch = release/alpha
+    if: branch = alpha
 # stages: 
 #   - compile
 #   - test
