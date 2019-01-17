@@ -15,9 +15,8 @@ deploy:
     project: ./dist/  #build output path
     skip_cleanup: true
     domain:  economic-surprise.surge.sh
-    branches: 
-      only:
-        - alpha
+    on:
+      branch: alpha
   # - provider: heroku
   #   skip_cleanup: true
   #   project: ./dist/  #build output path
