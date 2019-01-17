@@ -1,6 +1,10 @@
 language: node_js
 node_js:
 - '6'
+# if: branch = release/alpha
+stages: 
+  - name: alpha
+    if: branch = release/alpha
 # stages: 
 #   - compile
 #   - test
@@ -8,12 +12,11 @@ node_js:
 after_success:
   - npm run build
   - npm run deploy
-# if: branch = release/alpha
+# # if: branch = release/alpha
 deploy:
   - provider: surge
     project: ./dist/  #build output path
     skip_cleanup: true
-    if: branch = release/alpha
     domain:  economic-surprise.surge.sh
   # - provider: heroku
   #   skip_cleanup: true
