@@ -1,22 +1,24 @@
 language: node_js
 node_js:
 - '6'
-# if: branch = release/alpha
-# stages: 
-#   - compile
-#   - test
-#   - deploy
+
 after_success:
   - npm run build
   - npm run deploy
-# # if: branch = release/alpha
+
 deploy:
   - provider: surge
     project: ./dist/  #build output path
     skip_cleanup: true
-    domain:  economic-surprise.surge.sh
+    domain:  alpha-abyss.surge.sh
     on:
-      branch: alpha
+      branch: release/alpha
+  - provider: surge
+    project: ./dist/  #build output path
+    skip_cleanup: true
+    domain:  development-abyss.surge.sh
+    on:
+      branch:  release/development      
   # - provider: heroku
   #   skip_cleanup: true
   #   project: ./dist/  #build output path
