@@ -6,9 +6,10 @@ import webpack from 'webpack';
 
 /* eslint-disable no-console */
 
-const port = 3000;
+// const port = 3000;
 const app = express();
 const compiler = webpack(config);
+app.set('port', (process.env.PORT || 5000));
 
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
@@ -31,10 +32,10 @@ app.get('*', function(req, res) {
 });
 
 
-app.listen(port, function(err) {
+app.listen(app.get('port'), function(err) {
   if (err) {
     console.log(err);
   } else {
-    open(`http://localhost:${port}`);
+    open(`http://localhost:${app.get('port')}`);
   }
 });
