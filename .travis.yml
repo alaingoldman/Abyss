@@ -5,6 +5,7 @@ node_js:
 after_success:
   - npm run build
   - npm run deploy
+  - npm run start
 
 deploy:
   - provider: surge
