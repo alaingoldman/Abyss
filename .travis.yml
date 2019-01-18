@@ -26,9 +26,9 @@ deploy:
     api_key:
       secure: HsvjdxhpMlcJl1fHoPm1Z+JyJtjV36t4NyQop5OybrkVwdG8uAtPcq8UEcUNTMmNzrSlYPy6oU/5E+rZSuJ6PMbHuRp7NZ8IZmNZ0qAPpfBErFBpLN18WxROsb5me49eAfndn484D8viLNg2GMy8X7NeaODgxcSOE6oAXyvgKyokK+zpYuo80RQRHXA0RfMOS6aSaZXnXG27u62SLD4XAQhWnmWPdMtKMaDWz+6FlV9VINpr/ewy/kHvLENVg4ymdEVLQzUjQnLdRLoDY2SzL+GXEVYjoJX32xzRYjzi2yqeQQI7ZQHmkBnFbioW/i8jHc59j4TDQ8VIbxrjVnqN9viistz1+u6zJOEmVQHRmFjeMeEEaY0hyFXbhsGqyG8dR0DNCJ0CCQFFZ+YhRRZxB0N3nNTVNyEOqZ649mm9VGYFDTHEb1btncIj9x0fhwhVuf/u+gYOTgi0G4OpmYUxJQvj6TPuXUre2eOBk9Y56vOyTCHTa3/653yj507lbAI9A1dtfFDcqtSgt5A67mucJ5NL8jTWnGiQVfeT51BYjFvFLf5tvZByc3joFAmUsNVoIWz6INBYr0N9NSUXi5Nwmrfnjiqo+OruhQulMNo2ru8aIUfjH7m4E0WuZZxJCu1xK8PgyziQDgMRf/9g7yU0etwpHpEQ3crM8JLPGIDQhFM=
     app: stormy-dawn-37737
-    # on:
-    #   repo: alaingoldman/Abyss
-      # branch:  release/alpha
+    on:
+      repo: alaingoldman/Abyss
+      branch:  release/development
   # heroku development  
   # - provider: heroku
   #   skip_cleanup: true
