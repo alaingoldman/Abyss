@@ -28,7 +28,7 @@ deploy:
     app: stormy-dawn-37737
     on:
       repo: alaingoldman/Abyss
-      # branch:  release/alpha
+      branch:  release/development
   # heroku development  
   # - provider: heroku
   #   skip_cleanup: true
