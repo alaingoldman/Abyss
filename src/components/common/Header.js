@@ -1,16 +1,16 @@
-import { IndexLink, Link } from 'react-router';
+import { NavLink } from 'react-router-dom';
 import React from 'react';
 
 const Header = () => {
     return(
         <nav> 
-            <IndexLink to="/" activeClassName="active">Home</IndexLink>
+            <NavLink exact to="/" activeClassName="active">Home</NavLink>
             {" | "}
-            <Link to="/courses" activeClassName="active">Courses</Link>
+            <NavLink exact to="/courses" activeClassName="active">Courses</NavLink>
             {" | "}
-            <Link to="/about" activeClassName="active">About</Link>
+            <NavLink exact to="/about" activeClassName="active">About</NavLink>
             {" | "}
-            <Link to="/task" activeClassName="active">Tasks</Link>
+            <NavLink exact to="/task" activeClassName="active">Tasks</NavLink>
         </nav>
     );
 };
