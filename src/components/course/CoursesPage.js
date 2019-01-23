@@ -1,6 +1,6 @@
 import React from 'react';
 
-class CoursesPage extends React.Component {
+export default class CoursesPage extends React.Component {
     render() {
         return(
             <div>
@@ -9,5 +9,3 @@ class CoursesPage extends React.Component {
         );
     }
 }
-
-export default CoursesPage;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-class NoMatchPage extends React.Component {
+export default class NoMatchPage extends React.Component {
     render() {
         return (
             <div className="jumbotron">
@@ -9,5 +9,3 @@ class NoMatchPage extends React.Component {
         );
     }
 }
-
-export default NoMatchPage;

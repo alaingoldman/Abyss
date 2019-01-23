@@ -1,11 +1,13 @@
 import React from 'react';
 
-class TaskPage extends React.Component {
+export default class TaskPage extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
     render(){
         return(
             <div> well shit?</div>
         );
     }
 }
-
-export default TaskPage;
