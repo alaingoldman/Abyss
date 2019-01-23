@@ -13,9 +13,9 @@ class App extends React.Component {
                 <Header/>
                 <Switch>
                     <Route exact path="/" component={HomePage}/>
-                    <Route path="courses" component={CoursesPage} />
-                    <Route path="about"   component={AboutPage} />
-                    <Route path="task"    component={TaskPage} />
+                    <Route path="/courses" component={CoursesPage} />
+                    <Route path="/about"   component={AboutPage} />
+                    <Route path="/task"    component={TaskPage} />
                 </Switch>
             </div>
         );
