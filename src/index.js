@@ -3,12 +3,12 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import 'babel-polyfill';
 
 import App from './components/App.js';
-import { BrowserRouter  } from 'react-router-dom';
+import { HashRouter  } from 'react-router-dom';
 import React from 'react';
 import { render } from 'react-dom';
 
 render((
-    <BrowserRouter>
+    <HashRouter>
         <App/>
-    </BrowserRouter>
+    </HashRouter>
 ),document.getElementById('root'));
