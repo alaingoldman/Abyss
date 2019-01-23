@@ -18,15 +18,9 @@ const App = () => (
     <div>
         <Header/>
         <Switch {...defaultProps}>
-            <Route exact path="/"    render={() =>(
-                <HomePage {...defaultProps} />
-            )} />
-            <Route exact path="/courses"    render={() =>(
-                <CoursesPage {...defaultProps} />
-            )} />
-            <Route exact path="/about"    render={() =>(
-                <AboutPage {...defaultProps} />
-            )} />
+            <Route exact path="/"  component={HomePage}/>
+            <Route path="/courses" component={CoursesPage} />
+            <Route path="/about"   component={AboutPage} />
             <Route path="/task"    render={() =>(
                 <TaskPage {...defaultProps} />
             )} />

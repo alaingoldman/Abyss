@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AboutPage = (
+const AboutPage = () => (
     <div>
         <h1>About</h1>
         <p> This app uses react... blah blah.</p>
