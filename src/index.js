@@ -8,7 +8,7 @@ import React from 'react';
 import { render } from 'react-dom';
 
 render((
-    <HashRouter>
+    <HashRouter hashType="noslash">
         <App/>
     </HashRouter>
 ),document.getElementById('root'));
