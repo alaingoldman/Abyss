@@ -1,5 +1,6 @@
 {
   "name": "abyss",
+  "private": false,
   "version": "0.0.0-development",
   "description": "General purpose react app",
   "scripts": {
@@ -37,6 +38,7 @@
     "webpack-md5-hash": "0.0.6"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^3.0.2",
     "babel-cli": "6.8.0",
     "babel-core": "6.8.0",
     "babel-loader": "6.2.4",
@@ -78,5 +80,57 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/alaingoldman/Abyss.git"
+  },
+  "release": {
+    "branch": "master",
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "releaseRules": [
+            {
+              "type": "chore",
+              "release": "patch"
+            },
+            {
+              "type": "refactor",
+              "release": "minor"
+            },
+            {
+              "type": "feat",
+              "release": "minor"
+            },
+            {
+              "type": "fix",
+              "release": "patch"
+            },
+            {
+              "type": "perf",
+              "release": "patch"
+            }
+          ]
+        }
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {}
+      ],
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
+      [
+        "@semantic-release/github",
+        {}
+      ],
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ]
+    ]
   }
 }
