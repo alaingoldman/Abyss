@@ -1,16 +1,14 @@
-import {Link} from 'react-router'; 
+import { Link } from 'react-router-dom'; 
 import React from 'react';
 
-class HomePage extends React.Component {
+export default class HomePage extends React.Component {
     render() {
         return (
             <div className="jumbotron">
-                <h1>Pluralsight Admin</h1>
-                <p> React, Redux and React Router in ES6 for ultra-responsive web apps.</p>
+                <h1>Sight Admin</h1>
+                <p> React and React Router in ES6 for ultra-responsive web apps.</p>
                 <Link to="about" className="btn btn-primary btn-lg">Learn more</Link>
             </div>
         );
     }
 }
-
-export default HomePage;
