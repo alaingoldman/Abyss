@@ -1,7 +1,7 @@
 {
   "name": "abyss",
   "private": false,
-  "version": "0.0.0-development",
+  "version": "1.0.1",
   "description": "General purpose react app",
   "scripts": {
     "prestart": "babel-node tools/startMessage.js",
@@ -132,10 +132,16 @@
           "changelogFile": "CHANGELOG.md"
         }
       ],
-      ["@semantic-release/git", {
-        "assets": ["CHANGELOG.md", "package.json"],
-        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-      }]
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "CHANGELOG.md",
+            "package.json"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
     ]
   }
 }
