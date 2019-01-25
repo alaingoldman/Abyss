@@ -1,7 +1,7 @@
 {
   "name": "abyss",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "General purpose react app",
   "scripts": {
     "prestart": "babel-node tools/startMessage.js",
