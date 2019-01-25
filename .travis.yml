@@ -15,10 +15,5 @@ deploy:
     skip_cleanup: true
     domain:  alpha-abyss.surge.sh
     on:
-      branch: release/alpha
-  - provider: surge
-    project: ./dist/
-    skip_cleanup: true
-    domain:  development-abyss.surge.sh
-    on:
-      branch: release/development
+      branch: master
+      tag: true
