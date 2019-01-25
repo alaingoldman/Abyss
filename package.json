@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/git": "^7.0.8",
     "babel-cli": "6.8.0",
     "babel-core": "6.8.0",
     "babel-loader": "6.2.4",
@@ -130,7 +131,11 @@
         {
           "changelogFile": "CHANGELOG.md"
         }
-      ]
+      ],
+      ["@semantic-release/git", {
+        "assets": ["CHANGELOG.md", "package.json"],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }]
     ]
   }
 }
