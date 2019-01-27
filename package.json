@@ -51,6 +51,7 @@
     "cheerio": "0.22.0",
     "colors": "1.1.2",
     "compression": "1.6.1",
+    "conventional-changelog-angular": "github:StanleyGoldman/conventional-changelog-angular-custom",
     "cross-env": "1.0.7",
     "css-loader": "0.23.1",
     "enzyme": "2.2.0",
@@ -88,6 +89,7 @@
       [
         "@semantic-release/commit-analyzer",
         {
+          "config": "conventional-changelog-angular",
           "releaseRules": [
             {
               "type": "chore",
@@ -114,7 +116,9 @@
       ],
       [
         "@semantic-release/release-notes-generator",
-        {}
+        {
+          "config": "conventional-changelog-angular"
+        }
       ],
       [
         "@semantic-release/npm",
