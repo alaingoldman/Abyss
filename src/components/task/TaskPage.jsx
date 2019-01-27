@@ -8,14 +8,14 @@ export default class TaskPage extends React.Component {
             tasks: []
         };
         getTasks().then(resp => {
-            // console.log(resp);
+            console.log("getTasks resp", resp);
             this.setState({
-                tasks: resp
+                tasks: resp || []
             });
         });
     }
 
-    allTasks() {
+    allTasks = () => {
         return this.state.tasks.map(x => {
             return (
                 <p key={x.createdAt}>
