@@ -9,14 +9,20 @@ export default class TaskPage extends React.Component {
         }
     }
 
-    componentDidMount(){
-        getTasks().then((resp) => {
-            console.log(resp);
-            this.setState({
-                tasks: resp
-            });
-        });
+    asnyc crap () {
+        const result = await getTasks(); 
     }
+
+    // asnyc componentDidMount(){
+    //     const result = await getTasks(); 
+
+    //     // getTasks().then((resp) => {
+    //     //     console.log(resp);
+    //     //     this.setState({
+    //     //         tasks: resp
+    //     //     });
+    //     // });
+    // }
 
     allTasks() {
         return this.state.tasks.map((x) => {
