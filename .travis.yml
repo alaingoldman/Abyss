@@ -3,11 +3,11 @@ node_js:
 - '8'
 
 script:
+  - npx semantic-release
   - npm run build
 
 after_success:
   - npm run deploy
-  - npx semantic-release
 
 deploy:
   - provider: surge
@@ -16,4 +16,3 @@ deploy:
     domain:  alpha-abyss.surge.sh
     on:
       branch: master
-      tag: true
