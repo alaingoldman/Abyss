@@ -6,12 +6,9 @@ export default class TaskPage extends React.Component {
         super();
         this.state = {
             tasks: []
-        }
-    }
-
-    componentDidMount(){
-        getTasks().then((resp) => {
-            console.log(resp);
+        };
+        getTasks().then(resp => {
+            // console.log(resp);
             this.setState({
                 tasks: resp
             });
@@ -19,16 +16,17 @@ export default class TaskPage extends React.Component {
     }
 
     allTasks() {
-        return this.state.tasks.map((x) => {
-            return <p key={x.createdAt}> {x.message} | {x.author} | {x.createdAt} </p>;
+        return this.state.tasks.map(x => {
+            return (
+                <p key={x.createdAt}>
+                    {' '}
+                    {x.message} | {x.author} | {x.createdAt}{' '}
+                </p>
+            );
         });
     }
 
-    render(){
-        return(
-            <div> 
-                {this.allTasks()}
-            </div>
-        );
+    render() {
+        return <div>{this.allTasks()}</div>;
     }
 }
