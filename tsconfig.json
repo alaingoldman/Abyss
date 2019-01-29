@@ -1,0 +1,16 @@
+{
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "target": "es5",
+        "jsx": "react",
+        "lib": [ "es2015", "es2016", "dom" ]
+    },
+    "include": [
+        "./src/**/*"
+    ]
+}
